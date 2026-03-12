@@ -185,7 +185,7 @@ public class MoviesHandler extends BaseHttpHandler {
         try {
             Long id = Long.parseLong(parts[2]);
             Movie movie = store.delete(id);
-            if(movie == null) {
+            if (movie == null) {
                 sendNoContent(exchange);
             } else {
                 sendError(exchange, 404, "Фильм не найден");
